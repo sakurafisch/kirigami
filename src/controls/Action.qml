@@ -134,10 +134,7 @@ Controls.Action {
      * @endcode
      * @property list<Action> Action::children
      */
-    default property alias children: root.__children
-
-    /** @internal */
-    property list<QtObject> __children
+    default property list<QtObject> children
 
     onChildrenChanged: {
         var child;

@@ -173,7 +173,7 @@ Controls.Control {
                     return [action]
                 }
 
-                if (action.children) {
+                if (action.children.length > 0) {
                     return Array.prototype.map.call(action.children, i => i)
                 }
 
