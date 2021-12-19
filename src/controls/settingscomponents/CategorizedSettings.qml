@@ -35,7 +35,7 @@ PageRow {
 
     columnView.columnWidth: Units.gridUnit * 7 // So it's the same size as the kxmlgui settings dialogs
     globalToolBar.showNavigationButtons: ApplicationHeaderStyle.NoNavigationButtons
-    globalToolBar.style: ApplicationHeaderStyle.Breadcrumb
+    globalToolBar.style: ApplicationHeaderStyle.None
 
     signal backRequested(var event)
     onBackRequested: {
@@ -74,9 +74,9 @@ PageRow {
             width: parent && parent.width > 0 ? parent.width : implicitWidth
             implicitWidth: contentItem.implicitWidth + Units.smallSpacing * 4
             implicitHeight: contentItem.implicitHeight + Units.smallSpacing * 2
-            highlighted: ListView.isCurrentItem
 
             action: modelData
+            highlighted: listview.currentIndex === index
             onClicked: listview.currentIndex = index
             contentItem: ColumnLayout {
                 spacing: Units.smallSpacing
