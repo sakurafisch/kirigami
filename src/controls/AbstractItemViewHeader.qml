@@ -15,6 +15,9 @@ import org.kde.kirigami 2.4 as Kirigami
  * of list headers in many mobile applications.
  * @since 2.1
  * @inherit QtQuick.Controls.Control
+ * @deprecated Don't use it in your view anymore.
+ *
+ * TODO KF6: remove
  */
 T2.Control {
     /**

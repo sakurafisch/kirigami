@@ -18,6 +18,9 @@ import "private"
  * It provides some default content: a title and an optional background image
  * @since 2.1
  * @inherit org::kde::kirigami::AbstractItemViewHeader
+ * @deprecated Don't use ItemViewHeader anymore in you views
+ *
+ * TODO KF6 remove
  */
 Kirigami.AbstractItemViewHeader {
     id: root
@@ -25,6 +28,8 @@ Kirigami.AbstractItemViewHeader {
     property alias color: heading.color
 
     property alias backgroundImage: image
+
+    Component.onCompleted: console.warn("Don't use ItemViewHeader anymore in you views.", (new Error).stack)
 
     maximumHeight: (backgroundImage.hasImage ? 10 : 6) * Kirigami.Units.gridUnit - (applicationWindow().header ? applicationWindow().header.height : 0) - bottomPadding
     bottomPadding: Kirigami.Units.smallSpacing
