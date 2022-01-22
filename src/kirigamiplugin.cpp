@@ -316,6 +316,7 @@ void KirigamiPlugin::registerTypes(const char *uri)
     qmlRegisterType(componentUrl(QStringLiteral("PromptDialog.qml")), uri, 2, 19, "PromptDialog");
     qmlRegisterType(componentUrl(QStringLiteral("AbstractChip.qml")), uri, 2, 19, "AbstractChip");
     qmlRegisterType(componentUrl(QStringLiteral("Chip.qml")), uri, 2, 19, "Chip");
+    qmlRegisterType(componentUrl(QStringLiteral("LoadingPlaceholder.qml")), uri, 2, 19, "LoadingPlaceholder");
 
     qmlRegisterSingletonType<InputMethod>(uri, 2, 19, "InputMethod", [](QQmlEngine *, QJSEngine *) {
         return new InputMethod{};

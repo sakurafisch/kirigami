@@ -196,6 +196,7 @@ ecm_target_qml_sources(KirigamiPlugin VERSION 2.19 SOURCES
     controls/PromptDialog.qml
     controls/AbstractChip.qml
     controls/Chip.qml
+    controls/LoadingPlaceholder.qml
 )
 
 ecm_target_qml_sources(KirigamiPlugin PRIVATE PATH private SOURCES
