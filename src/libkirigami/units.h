@@ -100,24 +100,18 @@ class KIRIGAMI2_EXPORT Units : public QObject
     /**
      * This property holds the amount of spacing that should be used between smaller UI elements,
      * such as a small icon and a label in a button.
-     * Internally, this size depends on the size of the default font as rendered on the screen,
-     * so it takes user-configured font size and DPI into account.
      */
     Q_PROPERTY(int smallSpacing READ smallSpacing WRITE setSmallSpacing NOTIFY smallSpacingChanged)
 
     /**
      * This property holds the amount of spacing that should be used between medium UI elements,
      * such as buttons and text fields in a toolbar.
-     * Internally, this size depends on the size of the default font as rendered on the screen,
-     * so it takes user-configured font size and DPI into account.
      */
     Q_PROPERTY(int mediumSpacing READ mediumSpacing WRITE setMediumSpacing NOTIFY mediumSpacingChanged)
 
     /**
      * This property holds the amount of spacing that should be used between bigger UI elements,
      * such as a large icon and a heading in a card.
-     * Internally, this size depends on the size of the default font as rendered on the screen,
-     * so it takes user-configured font size and DPI into account.
      */
     Q_PROPERTY(int largeSpacing READ largeSpacing WRITE setLargeSpacing NOTIFY largeSpacingChanged)
 
