@@ -22,7 +22,7 @@ import org.kde.kirigami 2.19 as Kirigami
 Kirigami.PlaceholderMessage {
     id: loadingPlaceholder
 
-    text: qsTr("Loading")
+    text: qsTr("Loading…")
 
     QQC2.BusyIndicator {
         Layout.alignment: Qt.AlignHCenter
