@@ -381,8 +381,11 @@ QQC2.Page {
             property Kirigami.PageRow row
             property T2.StackView stack
 
+            // don't load async so that on slower devices we don't have the page content height changing while loading in
+            // otherwise, it looks unpolished and jumpy
+            asynchronous: false
+
             visible: active
-            asynchronous: true
             active: (root.titleDelegate !== defaultTitleDelegate || root.globalToolBarStyle === Kirigami.ApplicationHeaderStyle.ToolBar || root.globalToolBarStyle === Kirigami.ApplicationHeaderStyle.Titles)
             onActiveChanged: {
                 if (active) {
